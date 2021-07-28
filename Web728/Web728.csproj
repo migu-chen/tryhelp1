@@ -70,6 +70,7 @@
     <Content Include="Global.asax" />
     <Content Include="Try1.aspx" />
     <Content Include="Tryapplication.aspx" />
+    <Content Include="TrySession.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm728a.aspx" />
   </ItemGroup>
@@ -91,6 +92,13 @@
     </Compile>
     <Compile Include="Tryapplication.aspx.designer.cs">
       <DependentUpon>Tryapplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrySession.aspx.cs">
+      <DependentUpon>TrySession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrySession.aspx.designer.cs">
+      <DependentUpon>TrySession.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm728a.aspx.cs">
       <DependentUpon>WebForm728a.aspx</DependentUpon>

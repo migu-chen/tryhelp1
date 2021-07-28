@@ -7,34 +7,32 @@ using System.Web.UI.WebControls;
 
 namespace Web728
 {
-    public partial class Tryapplication : System.Web.UI.Page
+    public partial class TrySession : System.Web.UI.Page
     {
-        public string PageFrom = "test";
-        public int PageClickCount = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.Lit1Msg.Text = Convert.ToInt32(this.Application["Count"]).ToString();
-        }//
+            this.Ltlmag.Text = Convert.ToInt32(this.Session["Count"]).ToString();
+        }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void btnClick_Click(object sender, EventArgs e)
         {
             int cnt = 0;
             //this.PageClickCount += 1;
-            if(this .Application["Count"] == null)
+            if (this.Session["Count"] == null)
             {
-                this.Application["Count"] = 1;
+                this.Session ["Count"] = 1;
                 cnt = 1;
-            } 
+            }
             else
             {
-                cnt = (int)this.Application["Count"];
+                cnt = (int)this.Session["Count"];
                 cnt += 1;
                 this.Application["Count"] = cnt;
             }
             //string val = this.Lit1Msg.Text;
             //int cnt = int.Parse(val);
-           // this.Application["Count"] = (cnt + 1);
-            this.Lit1Msg.Text = (cnt).ToString();
+            // this.Application["Count"] = (cnt + 1);
+            this.Ltlmag.Text = (cnt).ToString();
         }
     }
 }
