@@ -16,7 +16,7 @@ namespace Web728
 
         protected void btnClick_Click(object sender, EventArgs e)
         {
-            int cnt = 0;
+            int cnt = 0; 
             //this.PageClickCount += 1;
             if (this.Session["Count"] == null)
             {
@@ -27,7 +27,7 @@ namespace Web728
             {
                 cnt = (int)this.Session["Count"];
                 cnt += 1;
-                this.Application["Count"] = cnt;
+                this.Session["Count"] = cnt;
             }
             //string val = this.Lit1Msg.Text;
             //int cnt = int.Parse(val);
